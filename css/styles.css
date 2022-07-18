@@ -1,3 +1,18 @@
-body {
-    background-color: yellow;
+.page {
+    background-color: rgba(255, 255, 255, 1);
+}
+/* цвет логотипа #000000 #2196F3 */
+/* цвет заголовков #212121 */
+/* цвет текста #757575 */
+/* заголовок и кнопка баннера #FFFFFF */
+
+/* подвал: адрес #FFFFFF
+следующие два: rgba(255, 255, 255, 0.6) */
+.accent {
+    color: #2196F3;
+}
+.logo {color: #000000;}
+.hero { background-color: #2F303A;}
+.members-group {
+    background-color: #F5F4FA;
 }
