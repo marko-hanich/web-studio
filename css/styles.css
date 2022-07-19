@@ -1,5 +1,27 @@
+.list {
+	list-style: none;
+}
+.link {
+	text-decoration: none;
+}
+.address {
+	font-style: normal;
+}
+:root {
+	--main-font: "Roboto", sans-serif;
+	--main-color: #212121;
+	--secondary-color: #757575;
+	--logo-color: #000000;
+	--accent-color: #2196f3;
+	--hero-background-color: #2f303a;
+	--btn-text-color: #ffffff;
+	--team-background-color: #f5f4fa;
+	--portfolio-btn-back-color: #f5f4fa;
+	--contacts-link-color: rgba(255, 255, 255, 0.6);
+}
+
 .page {
-    background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 1);
 }
 /* цвет логотипа #000000 #2196F3 */
 /* цвет заголовков #212121 */
@@ -9,10 +31,58 @@
 /* подвал: адрес #FFFFFF
 следующие два: rgba(255, 255, 255, 0.6) */
 .accent {
-    color: #2196F3;
+	color: var(--accent-color);
 }
-.logo {color: #000000;}
-.hero { background-color: #2F303A;}
+.logo {
+	color: var(--logo-color);
+}
+.hero {
+	background-color: rgba(47, 48, 58, 1);
+}
 .members-group {
-    background-color: #F5F4FA;
+	background-color: #f5f4fa;
+}
+
+/* Header styles */
+.site-nav .link {
+	color: var(--main-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+	color: var(--accent-color);
+}
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+.auth-nav .auth-link {
+	color: var(--secondary-color);
+}
+.auth-nav .auth-link:hover,
+.site-nav .link:focus {
+	color: var(--accent-color);
+}
+
+.section-title {
+	color: var(--main-color);
+}
+
+/* hero styles */
+.hero-title {
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 1);
+}
+/* button styles */
+.button {
+	color: var(--btn-text-color);
+    background-color: var(--accent-color);
+}
+
+/* features styles */
+.features-list-title {
+	text-transform: uppercase;
+	color: var(--main-color);
+}
+.features-list-text {
+	color: var(--secondary-color);
 }
