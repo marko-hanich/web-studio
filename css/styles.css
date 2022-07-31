@@ -50,6 +50,9 @@ body {
 .contact-link {
   color: var(--secondary-color);
 }
+.contacts-link {
+  color: var(--secondary-color);
+}
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
@@ -62,10 +65,8 @@ body {
 .contacts-link:focus {
   color: var(--accent-color);
 }
-.studio {
-  color: var(--accent-color);
-}
-.portfolio {
+
+.current {
   color: var(--accent-color);
 }
 
@@ -73,6 +74,19 @@ body {
           main
 ===========================*/
 
+/* hidden title */
+ .visually-hidden {
+	position:absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
 /* Hero */
 .hero {
