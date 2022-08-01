@@ -22,18 +22,18 @@
     <!--!Header-->
     
     <header class="header">
-      <div class="container">
-      <nav>
+      <div class="container main-header">
+      <nav class="main-nav">
         <a class="link link-logo" href="./index.html" lang="en">
           <span class="accent">Web</span>Studio</a
         >
-        <ul class="list">
+        <ul class="list menu-list-link">
           <li><a class="link menu-link current" href="./index.html">Студия</a></li>
           <li><a class="link menu-link" href="./portfolio.html">Портфолио</a></li>
           <li><a class="link menu-link" href="">Контакты</a></li>
         </ul>
       </nav>
-      <ul class="list">
+      <ul class="list contact-list-link">
         <li>
           <a class="link contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
         </li>
@@ -45,46 +45,49 @@
     
     <main class="main">
       <!--!hero section-->
-      <section class="hero">
-        <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+      <section class="hero">      
+        <!-- BR!!! -->
+        <h1 class="hero-title">Эффективные решения<br> для вашего бизнеса</h1>
         <button class="modal-btn" type="button">Заказать услугу</button>
       </section>
       <!--!about us section-->
       <section>
+        <div class="container features-sect">
         <h2 class="visually-hidden">Преимущества</h2>
 
         <ul class="list about-us">
-          <li>
+          <li class="about-us-list">
             <h3 class="about-us-title">Внимание к деталям</h3>
             <p class="about-us-item">
               Идейные соображения, а также начало повседневной работы по формированию позиции.
             </p>
           </li>
-          <li>
+          <li class="about-us-list">
             <h3 class="about-us-title">Пунктуальность</h3>
             <p class="about-us-item">
               Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
             </p>
           </li>
-          <li>
+          <li class="about-us-list">
             <h3 class="about-us-title">Планирование</h3>
             <p class="about-us-item">
               Равным образом консультация с широким активом в значительной степени обуславливает.
             </p>
           </li>
-          <li>
+          <li class="about-us-list">
             <h3 class="about-us-title">Современные технологии</h3>
             <p class="about-us-item">
               Значимость этих проблем настолько очевидна, что реализация плановых заданий.
             </p>
           </li>
         </ul>
+        </div>
       </section>
       <!--!our work section-->
       <section>
-        <h2 class="title">Чем мы занимаемся</h2>
-        <ul class="list">
-          <li>
+        <h2 class="title-work">Чем мы занимаемся</h2>
+        <ul class="list how-we-doing">
+          <li class="img-work">
             <img
               src="./images/main-page/how_we_doing/img1.jpg"
               alt="Сотрудник печатает на клавиатуре"
@@ -92,7 +95,7 @@
               height="294"
             />
           </li>
-          <li>
+          <li class="img-work">
             <img
               src="./images/main-page/how_we_doing/img2.jpg"
               alt="Сотрудник смотрит в экран ноутбука"
@@ -100,7 +103,7 @@
               height="294"
             />
           </li>
-          <li>
+          <li class="img-work">
             <img
               src="./images/main-page/how_we_doing/img3.jpg"
               alt="Сотрудник работает на планшете"
@@ -112,55 +115,66 @@
       </section>
       <!-- !our team section-->
       <section class="our-team">
+        <div class="container">
         <h2 class="title">Наша команда</h2>
-        <ul class="list">
-          <li>
+        <ul class="list team-list">
+          <li class="card">
             <img
               src="./images/main-page/people/igor.jpg"
               alt="Сотрудник Игорь Демьяненко"
               width="270"
               height="260"
             />
+            <div class="team-info">
             <h3 class="team-name">Игорь Демьяненко</h3>
             <p class="team-prof" lang="en">Product Designer</p>
+            </div>
           </li>
-          <li>
+          <li class="card">
             <img
               src="./images/main-page/people/olga.jpg"
               alt="Сотрудник Ольга Репина"
               width="270"
               height="260"
             />
+             <div class="team-info">
             <h3 class="team-name">Ольга Репина</h3>
             <p class="team-prof" lang="en">Frontend Developer</p>
+            </div>
           </li>
-          <li>
+          <li class="card">
             <img
               src="./images/main-page/people/nikolai.jpg"
               alt="Сотрудник Николай Тарасов"
               width="270"
               height="260"
             />
+             <div class="team-info">
             <h3 class="team-name">Николай Тарасов</h3>
             <p class="team-prof" lang="en">Marketing</p>
+            </div>
           </li>
-          <li>
+          <li class="card">
             <img
               src="./images/main-page/people/mikhail.jpg"
               alt="Сотрудник Михаил Ермаков"
               width="270"
               height="260"
             />
+             <div class="team-info">
             <h3 class="team-name">Михаил Ермаков</h3>
             <p class="team-prof" lang="en">UI Designer</p>
+            </div>
           </li>
         </ul>
+        </div>
       </section>
     </main>
     <!--!footer-->
     <footer class="footer">
+      <div class="container footer-div">
       <a class="link link-logo-footer" href="./index.html" lang="en">
-        <span class="accent">Web</span>Studio</a
+        <span class="accent-footer">Web</span><span class="footer-studio">Studio</span></a
       >
       <address class="address">
         <ul class="list">
@@ -177,6 +191,7 @@
           <li><a class="link contacts-link" href="tel:+380991111111">+38 099 111 11 11</a></li>
         </ul>
       </address>
+      </div>
     </footer>
   </body>
 </html>
