@@ -1,5 +1,8 @@
+/* !Главная страница */
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
@@ -97,6 +100,7 @@ body {
 /* Hero */
 .hero {
   background-color: var(--hero-background-color);
+  text-align: center;
 }
 .hero-title {
   font-weight: 900;
@@ -106,6 +110,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--btn-text-color);
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .modal-btn {
   font-family: var(--main-font);
@@ -120,6 +126,7 @@ body {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  min-width: 200px;
 border: 0;  
 padding: 10px 32px;
   border-radius: 4px;
@@ -131,6 +138,7 @@ padding: 10px 32px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .about-us-item {
   font-size: 14px;
@@ -145,6 +153,7 @@ padding: 10px 32px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 /* Our team */
 .our-team {
@@ -156,6 +165,7 @@ padding: 10px 32px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 .team-prof {
   font-size: 16px;
@@ -179,5 +189,70 @@ padding: 10px 32px;
   margin: -1px;
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !Портфолио */
+
+/* button */
+.portfolio-btn {
+  color: var(--main-color);
+  background-color: var(--portfolio-btn-back-color);
+  font-family: var(--main-font);
+  font-weight: 500;
+font-size: 16px;
+line-height: 1.63;
+text-align: center;
+letter-spacing: 0.03em;
+padding: 6px 22px;
+border: 0;  
+border-radius: 4px;
+  cursor: pointer;
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+}
+
+/* Portfolio cards */
+.portfolio-title {
+font-family: var(--main-font);
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+color: var(--main-color);
+}
+
+.portfolio-item {
+  font-family: var(--main-font);
+font-weight: 400;
+font-size: 16px;
+line-height: 1.88;
+letter-spacing: 0.03em;
+color: var(--secondary-color);
+}
+
+
+
+
 
 
