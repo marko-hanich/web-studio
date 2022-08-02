@@ -1,4 +1,6 @@
 /* !Главная страница */
+
+/* ?Выставление общих параметров */
 .list {
   list-style: none;
   padding: 0;
@@ -13,6 +15,7 @@
 .item {
   text-decoration: none;
 }
+/* ?Выставление "заготовок" */
 :root {
   --main-font: 'Roboto', sans-serif;
   --main-color: #212121;
@@ -30,6 +33,7 @@ body {
   font-family: var(--main-font);
   color: var(--main-color);
 }
+/* ?Выставление контейнера (див) */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -45,6 +49,7 @@ body {
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--border-color);
 }
+/* ?Выставление горизонтали и центрирования шапки */
 .head {
   display: flex;
   align-items: center;
@@ -55,6 +60,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+/* ?Выставление смещения для "ли" (кроме посленднего) */
 .header-list .item + .item {
   margin-left: 50px;
 }
@@ -80,6 +86,7 @@ body {
 /* margin-left: 215px; */
   margin-right: 93px;
 }
+/* ?Базовые настройки цвета */
 .accent {
   color: var(--accent-color);
 }
@@ -121,9 +128,11 @@ body {
 }
 
 /* Hero */
+/* ?Центрирование текста в секции герой */
 	.hero {
   background-color: var(--hero-background-color);
   text-align: center;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -138,12 +147,12 @@ body {
   margin-top: 0;
   margin-bottom: 30px;
 }
+/* ?Для кнопки ставим инлайн-блок */
 .modal-btn {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
   align-items: center;
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
@@ -151,7 +160,7 @@ body {
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
  border-radius: 4px;
  background-color: var(--accent-color);
-border: 0;
+ border: 0;
  display: inline-block;
  padding: 10px 32px;}
 
@@ -159,8 +168,8 @@ border: 0;
 /*about us*/
 .section {
   font-style: normal;
- /* padding-top: 94px;
- padding-bottom: 94px; */
+ padding-top: 94px;
+ padding-bottom: 94px;
 }
 .about-us {
  display: flex;
@@ -172,6 +181,7 @@ border: 0;
 .about-us-list {
   margin-right: 30px;
 }
+/* ?Выставление настроек для последнего элемента */
 .about-us-list:last-child {
   margin-right: 0px;
   
@@ -230,7 +240,6 @@ border: 0;
 /*########## OUR TEAM ############*/
 .team-list {
  display: flex;
- padding-bottom: 94px;
 }
 .team-list .card + .card {
  margin-left: 30px;
@@ -249,7 +258,6 @@ border: 0;
 }
 .title-team {
  margin-bottom: 50px;
- padding-top: 94px;
 }
 .team-info {
  padding: 30px 0px;
@@ -314,7 +322,7 @@ border: 0;
  margin-top: 9px;
 }
 .address-link {
-  font-family: var(--contacts-link-color);
+ font-family: var(--contacts-link-color);
  font-size: 14px;
  line-height: 1.71;
  letter-spacing: 0.03em;
@@ -346,11 +354,16 @@ border: 0;
 /* !Портфолио */
 
 /* button */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* ?Центрирование кнопки */
 .list-btn {
   display: flex;
-  margin-top: 94px;
   margin-bottom: 50px;
-justify-content: center;}
+  justify-content: center;}
+
 .list-btn .item + .item {
  margin-left: 8px;}
 .portfolio-btn {
@@ -366,7 +379,9 @@ justify-content: center;}
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-justify-content: center;}
+  justify-content: center;
+  height: 38px;}
+
 .portfolio-btn:hover,
 .portfolio-btn:focus {
  color: var(--btn-text-color);
@@ -388,9 +403,7 @@ background-color: var(--btn-text-color);}
 .portfolio-card:nth-child(3n){
   margin-right: 0;
 }
-.portfolio-card {
-  margin-bottom: 30px;
-}
+
 .portfolio-card-info {
  padding: 20px 0px;
 }
@@ -434,6 +447,3 @@ background-color: var(--btn-text-color);}
 
 
 
-.second-footer {
-  margin-top: 64px;
-}
