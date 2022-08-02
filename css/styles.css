@@ -158,6 +158,7 @@ border: 0;
 
 /*about us*/
 .section {
+  font-style: normal;
  /* padding-top: 94px;
  padding-bottom: 94px; */
 }
@@ -310,6 +311,9 @@ border: 0;
  line-height: 1.71;
  letter-spacing: 0.03em;
  color: var(--btn-text-color);
+}
+.address-item {
+  margin-top: 9px;
 }
 .address .list {
  padding-left: 0;
