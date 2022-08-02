@@ -150,6 +150,100 @@ First homework
 
 
 
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--border-color);
+
+}
+.main-header {
+  display: flex;
+  align-items: center;
+}
+.link-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-color);
+  margin-left: 215px;
+}
+.accent {
+  color: var(--accent-color);
+}
+/* Наделение элементов горизонтальной панелью */
+.header-line {
+  display: flex;
+  align-items: center;
+}
+.head > .list {
+  display: flex;
+}
+.head .menu-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+/* Выставление горизонтали для Студия\Контакты\Портфолио */
+.main-nav li:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* Можно задать так: (тоесть применяется ко второму, третьему четвертому, ибо над первым нет соседа)
+ .main-nav li + li {
+  margin-left: 40px;
+} */
+
+/* Выставление почты и телефона */
+.contact-list-link li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-list {
+  margin-left: 93px;
+}
+
+.menu-link {
+  color: var(--main-color);
+}
+.contact-link {
+  color: var(--secondary-color);
+  display: flex;
+}
+.contact-list-link {
+  display: flex;
+  margin-left: auto;
+  margin-right: 215px;
+}
+.contacts-link {
+  color: var(--secondary-color);
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
+}
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
+
+.current {
+  color: var(--accent-color);
+}
+-------------------------------- .container {
+  color: #000000;
+  /*! outline: 5px px solid pink;}  */
+}
+
+
+
 
 
 

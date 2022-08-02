@@ -11,9 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
+   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -22,22 +25,22 @@
     <!--!Header-->
     
     <header class="header">
-      <div class="container main-header">
-      <nav class="main-nav">
+      <div class="container header-line">
+      <nav class="head">
         <a class="link link-logo" href="./index.html" lang="en">
           <span class="accent">Web</span>Studio</a
         >
-        <ul class="list menu-list-link">
-          <li><a class="link menu-link current" href="./index.html">Студия</a></li>
-          <li><a class="link menu-link" href="./portfolio.html">Портфолио</a></li>
-          <li><a class="link menu-link" href="">Контакты</a></li>
+        <ul class="list header-list">
+          <li class="item"><a class="link menu-link active" href="./index.html">Студия</a></li>
+          <li class="item"><a class="link menu-link" href="./portfolio.html">Портфолио</a></li>
+          <li class="item"><a class="link menu-link" href="">Контакты</a></li>
         </ul>
       </nav>
-      <ul class="list contact-list-link">
-        <li>
+      <ul class="list header-list header-info">
+        <li class="item">
           <a class="link contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
         </li>
-        <li><a class="link contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        <li class="item"><a class="link contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
       </ul>
         </div>
 
@@ -45,14 +48,16 @@
     
     <main class="main">
       <!--!hero section-->
-      <section class="hero">      
+      <section class="hero"> 
+        <div class="container">   
         <!-- BR!!! -->
         <h1 class="hero-title">Эффективные решения<br> для вашего бизнеса</h1>
         <button class="modal-btn" type="button">Заказать услугу</button>
-      </section>
+      </div>  
+    </section>
       <!--!about us section-->
       <section>
-        <div class="container features-sect">
+        <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
 
         <ul class="list about-us">
@@ -84,10 +89,11 @@
         </div>
       </section>
       <!--!our work section-->
-      <section>
-        <h2 class="title-work">Чем мы занимаемся</h2>
-        <ul class="list how-we-doing">
-          <li class="img-work">
+      <section class="section-work">
+        <div class="container">
+        <h2 class="title title-work">Чем мы занимаемся</h2>
+        <ul class="list list-work">
+          <li class="item">
             <img
               src="./images/main-page/how_we_doing/img1.jpg"
               alt="Сотрудник печатает на клавиатуре"
@@ -95,7 +101,7 @@
               height="294"
             />
           </li>
-          <li class="img-work">
+          <li class="item">
             <img
               src="./images/main-page/how_we_doing/img2.jpg"
               alt="Сотрудник смотрит в экран ноутбука"
@@ -103,7 +109,7 @@
               height="294"
             />
           </li>
-          <li class="img-work">
+          <li class="item">
             <img
               src="./images/main-page/how_we_doing/img3.jpg"
               alt="Сотрудник работает на планшете"
@@ -112,11 +118,12 @@
             />
           </li>
         </ul>
+        </div>
       </section>
       <!-- !our team section-->
-      <section class="our-team">
+      <section class="section our-team">
         <div class="container">
-        <h2 class="title">Наша команда</h2>
+        <h2 class="title title-team">Наша команда</h2>
         <ul class="list team-list">
           <li class="card">
             <img
@@ -172,9 +179,9 @@
     </main>
     <!--!footer-->
     <footer class="footer">
-      <div class="container footer-div">
+      <div class="container">
       <a class="link link-logo-footer" href="./index.html" lang="en">
-        <span class="accent-footer">Web</span><span class="footer-studio">Studio</span></a
+        <span class="accent-footer"><span class="accent">Web</span>Studio</a
       >
       <address class="address">
         <ul class="list">
