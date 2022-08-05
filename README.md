@@ -249,6 +249,110 @@ First homework
 
 
 
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--border-color);
+}
+/* ?Выставление горизонтали и центрирования шапки */
+.head {
+  display: flex;
+  align-items: center;
+}
+.header-list {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* ?Выставление смещения для "ли" (кроме посленднего) */
+.header-list .item + .item {
+  margin-left: 50px;
+}
+.header-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-info {
+  margin-left: auto;
+  /* margin-right: 215px; */
+}
+.header-line {
+  display: flex;
+}
+.link-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-color);
+/* margin-left: 215px; */
+  margin-right: 93px;
+}
+/* ?Базовые настройки цвета */
+.accent {
+  color: var(--accent-color);
+}
+.menu-link {
+  color: var(--main-color);
+}
+.contact-link {
+  color: var(--secondary-color);
+  
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
+}
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+.active {
+  color: var(--accent-color);
+}
+
+.icon-address > .contact-link {
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+}
+.header-list .item {
+  display: flex;
+  justify-content: center;
+}
+.icon-address {
+  display: flex;
+  align-items: center;
+}
+.icon-address .icon {
+  margin-right: 10px;
+}
+.contact-link:hover > .icon,
+.contact-link:focus > .icon {
+  --color-mail: var(--accent-color);
+}
+/*===========================
+          main
+===========================*/
+
+/* hidden title */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
 
 
