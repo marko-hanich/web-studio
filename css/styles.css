@@ -33,6 +33,10 @@
   --contacts-link-color: rgba(255, 255, 255, 0.6);
     --color-social-footer: rgba(255, 255, 255, 0.1);
 
+  --card-back: rgba(33, 150, 243, 0.9);
+  --timing: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 body {
   font-family: var(--main-font);
@@ -188,6 +192,64 @@ body {
 .modal-btn:focus {
   background-color: #188CE8;
 }
+
+
+
+
+
+
+
+
+
+
+/* !MODAL */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #eeeeee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.mod-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/icon/close.svg");
+}
+
+
+
+
+
+
+
+
+
+
 
 /*about us*/
 .section {
@@ -602,4 +664,36 @@ background-color: var(--btn-text-color);}
 .portfolio-card:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+
+
+
+.descr-div {
+  position: relative;
+  /* overflow: hidden; */
+}
+  .descr-card {
+  position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+color: var(--btn-text-color);
+background: var(--card-back);
+margin: 0;
+width: 100%;
+height: 100%;
+padding: 63px 24px;
+
+/* transform: translateY(101%); */
+transition: transform 250ms var(--timing);
+  }
+
+.portfolio-card:hover .descr-card {
+/* transform: translateY(0%); */
+opacity: 1;
 }
