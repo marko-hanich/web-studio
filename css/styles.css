@@ -238,6 +238,7 @@ background-color: rgba(0, 0, 0, 0.1);
 }
 
 .modal {
+  border-radius: 4px;
   min-width: 528px;
   min-height: 581px;
   background-color: var(--btn-text-color);
