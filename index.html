@@ -411,17 +411,46 @@
           </li>
         </ul>
       </div>
+      <div class="join-us">
+        <p class="text-join">Подпишитесь на рассылку</p>
+        <form action="" class="form-join-us">
+          <label for=""></label>
+          <input type="mail" placeholder="E-mail">
+          <button type="submit" class="join-us-btn">Подписаться</button>
+        </form>
+      </div>
     </div>
   </footer>
-  <!-- BACKDROP -->
+  <!-- BACKDROP И ФОРМА -->
   <div data-modal class="backdrop is-hidden">
     <div class="modal">
+     
       <button data-modal-close class="mod-btn" type="button">
       </button>
+       <div class="leave-contacts">
+          <p class="leave-contacts-text">Оставьте свои данные, мы вам перезвоним</p>
+        <form action="" class="modal-form">
+          <label for="name">Имя</label>
+          <input type="text" name="name" id="name">
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel">
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail">
+          <label for="name">Комментарий</label>
+          <input type="comment" placeholder="Введите текст" name="comment" id="comment">
+          <input class="input-check" name="License" type="checkbox" />
+          <label for="html">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+          <button type="submit" class="send-btn">Отправить</button>
+
+
+        </form>
+      </div>
     </div>
+
+
   </div>
-  <!-- Форма - стилизация -->
-  <div class="leave-contacts">
+  <!-- !Форма - стилизация -->
+  <!-- <div class="leave-contacts">
     <form action="">
       <p>Оставьте свои данные, мы вам перезвоним</p>
       <label for="name">Имя</label>
@@ -431,14 +460,14 @@
       <label for="mail">Почта</label>
       <input type="email" name="mail" id="mail">
       <label for="name">Комментарий</label>
-      <input type="comment" name="comment" id="comment">
+      <input type="comment" placeholder="Введите текст" name="comment" id="comment">
  <input class="input-check" name="License" type="checkbox" />
  <label for="html">Соглашаюсь с рассылкой и принимаю Условия договора</label>    
       <button type="submit">Отправить</button>
 
 
     </form>
-  </div>
+  </div> -->
   <!--  SCRIPT  -->
   <script src="./js/modal.js"></script>
 </body>
