@@ -73,23 +73,23 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
-.head {
+.nav {
   display: flex;
   align-items: center;
 }
 
-.header-list {
+.nav__list {
   display: flex;
 
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.header-list .item+.item {
+.nav__list .item+.item {
   margin-left: 50px;
 }
 
-.header-list .link {
+.nav__list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -99,11 +99,11 @@ body {
   margin-left: auto;
 }
 
-.header-line {
+.menu {
   display: flex;
 }
 
-.link-logo {
+.nav__logo {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -114,7 +114,7 @@ body {
   margin-right: 93px;
 }
 
-.accent {
+.nav__logo--accent {
   color: var(--accent-color);
 }
 
@@ -123,12 +123,12 @@ body {
 УСТАНОВКА ПОЛОСКИ ПОД АКТИВНОЙ СТРАНИЦЕЙ 
 ##########################################
 */
-.menu-link {
+.nav__link {
   color: var(--main-color);
   position: relative;
 }
 
-.menu-link.active::after {
+.nav__link.nav__link--active::after {
   content: '';
   width: 100%;
   position: absolute;
@@ -141,42 +141,42 @@ body {
 
 /* ########################################## */
 
-.icon-address>.contact-link {
+.contacts__item>.contacts__link {
   color: var(--secondary-color);
   display: flex;
   align-items: center;
 }
 
-.menu-link:hover,
-.menu-link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-color);
 }
 
-.active {
+.nav__link--active {
   color: var(--accent-color);
 }
 
-.header-list .item {
+.nav__list .item {
   display: flex;
   justify-content: center;
 }
 
-.icon-address {
+.contacts__item {
   display: flex;
   align-items: center;
 }
 
-.icon-address .icon {
+.contacts__item .icon {
   margin-right: 10px;
 }
 
-.contact-link:hover>.icon,
-.contact-link:focus>.icon {
+.contacts__link:hover>.icon,
+.contacts__link:focus>.icon {
   --color-mail: var(--accent-color);
 }
 
@@ -214,7 +214,7 @@ body {
   padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -226,7 +226,7 @@ body {
 }
 
 /* ?Для кнопки ставим инлайн-блок */
-.modal-btn {
+.hero__modal-btn {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
@@ -243,8 +243,8 @@ body {
   padding: 10px 32px;
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.hero__modal-btn:hover,
+.hero__modal-btn:focus {
   background-color: var(--btn-focus-bg);
 }
 
@@ -508,7 +508,7 @@ ABOUT US
   padding-bottom: 94px;
 }
 
-.about-us {
+.quality {
   display: flex;
   justify-content: center;
 
@@ -516,24 +516,24 @@ ABOUT US
   margin-bottom: 94px;
 }
 
-.about-us-list {
+.quality__list {
   margin-right: 30px;
 }
 
 /* ?Выставление настроек для последнего элемента */
-.about-us-list:last-child {
+.quality__list:last-child {
   margin-right: 0px;
 }
 
-.about-us .item {
+.quality .item {
   width: 270px;
 }
 
-.about-us .item+.item {
+.quality .item+.item {
   margin-left: 30px;
 }
 
-.about-us-title {
+.quality__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -544,7 +544,7 @@ ABOUT US
   margin-bottom: 10px;
 }
 
-.about-us-item {
+.quality__item {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -558,7 +558,7 @@ ABOUT US
 /* **********************
 *ICONS 
 *************************/
-.back-icon-about {
+.quality-card {
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
@@ -588,15 +588,15 @@ Our work
   margin-bottom: 0;
 }
 
-.title-work {
+.work__title {
   margin-bottom: 50px;
 }
 
-.list-work {
+.work__list {
   display: flex;
 }
 
-.list-work .item+.item {
+.work__list .item+.item {
   margin-left: 30px;
 }
 
@@ -621,22 +621,22 @@ Our work
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.list-work .item {
+.work__list .item {
   position: relative;
 }
 
 /*#####################
 OUR TEAM 
 #####################*/
-.team-list {
+.work__list {
   display: flex;
 }
 
-.team-list .card+.card {
+.work__list .work__item+.work__item {
   margin-left: 30px;
 }
 
-.card {
+.work__item {
   width: 270px;
   height: 428px;
   background: var(--btn-text-color);
@@ -645,11 +645,11 @@ OUR TEAM
   border-radius: 0px 0px 4px 4px;
 }
 
-.our-team {
+.work-section {
   background-color: var(--team-background-color);
 }
 
-.title-team {
+.work__title {
   margin-bottom: 50px;
 }
 

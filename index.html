@@ -19,23 +19,23 @@
 <body>
   <!--!Header-->
   <header class="header">
-    <div class="container header-line">
-      <nav class="head">
-        <a class="link link-logo" href="./index.html" lang="en">
-          <span class="accent">Web</span>Studio</a>
-        <ul class="list header-list">
-          <li class="item"><a class="link menu-link active" href="./index.html">Студия</a></li>
-          <li class="item"><a class="link menu-link" href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a class="link menu-link" href="#contacts">Контакты</a></li>
+    <div class="menu container">
+      <nav class="nav">
+        <a class="link nav__logo" href="./index.html" lang="en">
+          <span class="nav__logo--accent">Web</span>Studio</a>
+        <ul class="list nav__list">
+          <li class="item"><a class="link nav__link nav__link--active" href="./index.html">Студия</a></li>
+          <li class="item"><a class="link nav__link" href="./portfolio.html">Портфолио</a></li>
+          <li class="item"><a class="link nav__link" href="#contacts">Контакты</a></li>
         </ul>
       </nav>
-      <ul class="list header-list header-info">
-        <li class="item icon-address">
-          <a class="link contact-link" href="mailto:info@devstudio.com"><svg class="icon" width="16" height="12">
+      <ul class="list nav__list header-info">
+        <li class="item contacts__item">
+          <a class="link contacts__link" href="mailto:info@devstudio.com"><svg class="icon" width="16" height="12">
               <use href="./images/main-page/icon/icons.svg#mail"></use>
             </svg>info@devstudio.com</a>
         </li>
-        <li class="item icon-address"><a class="link contact-link" href="tel:+380961111111"><svg class="icon" width="10"
+        <li class="item contacts__item"><a class="link contacts__link" href="tel:+380961111111"><svg class="icon" width="10"
               height="16">
               <use href="./images/main-page/icon/icons.svg#phone"></use>
             </svg>+38 096 111 11 11</a></li>
@@ -47,60 +47,57 @@
   <main class="main">
     <!--!hero section-->
     <section class="hero">
-      <div class="container hero-container">
-        <!-- BR!!! -->
-        <h1 class="hero-title">Эффективные решения<br> для вашего бизнеса</h1>
-        <button data-modal-open class="modal-btn" type="button">Заказать услугу</button>
-
+      <div class="container">
+        <h1 class="hero__title">Эффективные решения<br> для вашего бизнеса</h1>
+        <button data-modal-open class="hero__modal-btn" type="button">Заказать услугу</button>
       </div>
     </section>
-    <!--!about us section-->
+    <!--!QUALITY section-->
     <section>
       <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
-
-        <ul class="list about-us">
-          <li class="about-us-list item">
-            <div class="back-icon-about">
-              <svg class="icon-about" width="70" height="70">
+        <ul class="list quality">
+          <li class="quality__list item">
+            <div class="quality-card">
+              <svg class="quality-card--icon" width="70" height="70">
                 <use href="./images/main-page/icon/icons.svg#antenna"></use>
               </svg>
             </div>
-            <h3 class="about-us-title">Внимание к деталям</h3>
-            <p class="about-us-item">
+            <h3 class="quality__title">Внимание к деталям</h3>
+            <p class="quality__item">
               Идейные соображения, а также начало повседневной работы по формированию позиции.
             </p>
           </li>
-          <li class="about-us-list">
-            <div class="back-icon-about">
-              <svg class="icon-about" width="70" height="70">
+          <li class="quality__list">
+            <div class="quality-card">
+              <svg class="quality-card--icon" width="70" height="70">
                 <use href="./images/main-page/icon/icons.svg#clock"></use>
               </svg>
             </div>
-            <h3 class="about-us-title">Пунктуальность</h3>
-            <p class="about-us-item">
+            <h3 class="quality__title">Пунктуальность</h3>
+            <p class="quality__item">
               Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
             </p>
           </li>
-          <li class="about-us-list">
-            <div class="back-icon-about">
-              <svg class="icon-about" width="70" height="70">
+          <li class="quality__list">
+            <div class="quality-card">
+              <svg class="quality-card--icon" width="70" height="70">
                 <use href="./images/main-page/icon/icons.svg#diagram"></use>
               </svg>
             </div>
-            <h3 class="about-us-title">Планирование</h3>
-            <p class="about-us-item">
+            <h3 class="quality__title">Планирование</h3>
+            <p class="quality__item">
               Равным образом консультация с широким активом в значительной степени обуславливает.
             </p>
           </li>
-          <li class="about-us-list">
-            <div class="back-icon-about">
-              <svg class="icon-about" width="70" height="70">
+          <li class="quality__list">
+            <div class="quality-card">
+              <svg class="quality-card--icon" width="70" height="70">
                 <use href="./images/main-page/icon/icons.svg#astronaut"></use>
               </svg>
             </div>
-            <h3 class="about-us-title">Современные технологии</h3>
-            <p class="about-us-item">
+            <h3 class="quality__title">Современные технологии</h3>
+            <p class="quality__item">
               Значимость этих проблем настолько очевидна, что реализация плановых заданий.
             </p>
           </li>
@@ -109,9 +106,9 @@
     </section>
     <!--!our work section-->
     <section class="section-work">
-      <div class="container work-cont">
-        <h2 class="title title-work">Чем мы занимаемся</h2>
-        <ul class="list list-work">
+      <div class="container work">
+        <h2 class="title work__title">Чем мы занимаемся</h2>
+        <ul class="list work__list">
           <li class="item">
             <img src="./images/main-page/how_we_doing/img1.jpg" alt="Сотрудник печатает на клавиатуре" width="370"
               height="294" />
@@ -131,11 +128,11 @@
       </div>
     </section>
     <!-- !our team section-->
-    <section class="section our-team">
-      <div class="container">
-        <h2 class="title title-team">Наша команда</h2>
-        <ul class="list team-list">
-          <li class="card">
+    <section class="section work-section">
+      <div class="work container">
+        <h2 class="title work__title">Наша команда</h2>
+        <ul class="list work__list">
+          <li class="work__item">
             <img src="./images/main-page/people/igor.jpg" alt="Сотрудник Игорь Демьяненко" width="270" height="260" />
             <div class="team-info">
               <h3 class="team-name">Игорь Демьяненко</h3>
@@ -174,7 +171,7 @@
               </ul>
             </div>
           </li>
-          <li class="card">
+          <li class="work__item">
             <img src="./images/main-page/people/olga.jpg" alt="Сотрудник Ольга Репина" width="270" height="260" />
             <div class="team-info">
               <h3 class="team-name">Ольга Репина</h3>
@@ -213,7 +210,7 @@
               </ul>
             </div>
           </li>
-          <li class="card">
+          <li class="work__item">
             <img src="./images/main-page/people/nikolai.jpg" alt="Сотрудник Николай Тарасов" width="270" height="260" />
             <div class="team-info">
               <h3 class="team-name">Николай Тарасов</h3>
@@ -252,7 +249,7 @@
               </ul>
             </div>
           </li>
-          <li class="card">
+          <li class="work__item">
             <img src="./images/main-page/people/mikhail.jpg" alt="Сотрудник Михаил Ермаков" width="270" height="260" />
             <div class="team-info">
               <h3 class="team-name">Михаил Ермаков</h3>
