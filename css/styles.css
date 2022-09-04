@@ -342,7 +342,7 @@ margin-top: 0;
   /* margin: 0; */
 }
 
-.label {
+.modal-form__label{
    position: relative;
 font-size: 12px;
 line-height: 1.16;
@@ -351,7 +351,7 @@ color: var(--secondary-color);
 cursor: pointer;
 }
 
-.input {
+.modal-form__input {
    border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -369,12 +369,12 @@ letter-spacing: inherit;
   outline: none;
 
 }
-.input:hover,
-.input:focus {
+.modal-form__input:hover,
+.modal-form__input:focus {
 border: 1px solid var(--accent-color);
 }
 
-.area {
+.modal-form__area {
   border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
@@ -391,11 +391,11 @@ padding: 12px 16px;
   transition: border 250ms var(--timing);
   outline: none;
 }
-.area:hover,
-.area:focus {
+.modal-form__area:hover,
+.modal-form__area:focus {
 border: 1px solid var(--accent-color);
 }
-.area::placeholder {
+.modal-form__area::placeholder {
 font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.01em;
@@ -403,7 +403,7 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 
-.input-check{
+.modal-form__input-check{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -414,11 +414,11 @@ color: rgba(117, 117, 117, 0.5);
   overflow: hidden;
 }
 
-.label-check {
+.modal-form__label-check {
   position: relative;
 }
 
-.checkbox-svg {
+.modal-form__checkbox-overlay {
   position: absolute;
   top: 3px;
   left: 12px;
@@ -426,21 +426,21 @@ color: rgba(117, 117, 117, 0.5);
   transition: transform 250ms var(--timing);
 }
 
-.checkbox-svg-full {
+.modal-form__checkbox-svg {
   position: absolute;
   top: 3px;
   left: 12px;
   transform: scale(1);
   transition: transform 250ms var(--timing);
 }
-.input-check:not(:checked)~.checkbox-svg-full {
+.modal-form__input-check:not(:checked)~.modal-form__checkbox-svg {
   transform: scale(0);
 }
-.input-check:not(:checked)~.checkbox-svg {
+.modal-form__input-check:not(:checked)~.modal-form__checkbox-overlay {
   transform: scale(1);
 }
 
-.check-text {
+.modal-form__check-text {
   color: var(--secondary-color);
   font-family: 'Roboto';
   font-weight: 400;
@@ -450,7 +450,7 @@ color: rgba(117, 117, 117, 0.5);
   margin-left: 36px;
 }
 
-.license-link {
+.modal-form__license-link {
   color: var(--accent-color);
   font-size: 14px;
   line-height: 1.71;
@@ -458,7 +458,7 @@ color: rgba(117, 117, 117, 0.5);
   text-decoration-line: underline;
 }
 
-.send-btn {
+.modal-form__send-btn {
   display: inline-block;
   align-items: center;
   background-color: var(--accent-color);
@@ -484,19 +484,19 @@ color: rgba(117, 117, 117, 0.5);
   margin-right: auto;
 }
 
-.send-btn:hover,
-.send-btn:focus {
+.modal-form__send-btn:hover,
+.modal-form__send-btn:focus {
   background: #188CE8;
 }
 
-.icon-form {
+.modal-form__icon {
   position: absolute;
   top: 28px;
   left: 12px;
   transition: fill 250ms var(--timing);
 }
-.modal-form .input:hover ~ .icon-form,
-.modal-form .input:focus ~ .icon-form {
+.modal-form .input:hover ~ .modal-form__icon,
+.modal-form .input:focus ~ .modal-form__icon {
   fill: var(--accent-color);
 }
 /*##########################
@@ -968,17 +968,17 @@ cursor: pointer;
 }
 
 /* ?Центрирование кнопки */
-.list-btn {
+.portfolio-filter {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.list-btn .item+.item {
+.portfolio-filter .item+.item {
   margin-left: 8px;
 }
 
-.portfolio-btn {
+.portfolio-filter__btn {
   color: var(--main-color);
   background-color: var(--portfolio-btn-back-color);
   font-family: var(--main-font);
@@ -995,8 +995,8 @@ cursor: pointer;
   height: 38px;
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.portfolio-filter__btn:hover,
+.portfolio-filter__btn:focus {
   color: var(--btn-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -1008,20 +1008,20 @@ Portfolio cards
 ################*/
 
 /* ?Выставление расположения карточек + с помощью формул */
-.card-list {
+.portfolio__card-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.portfolio-card:nth-child(3n) {
+.portfolio__card-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.portfolio-card-info {
+.portfolio__card-info {
   padding: 20px 0px;
 }
 
-.portfolio-title {
+.portfolio-card__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1032,7 +1032,7 @@ Portfolio cards
   margin-left: 24px;
 }
 
-.portfolio-item {
+.portfolio-card__subtitle {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -1042,7 +1042,7 @@ Portfolio cards
   margin-left: 24px;
 }
 
-.portfolio-card {
+.portfolio__card-item {
   background-color: var(--btn-text-color);
   border: 1px solid var(--portfolio-border-color);
   box-sizing: border-box;
@@ -1052,15 +1052,15 @@ Portfolio cards
   overflow: hidden;
 }
 
-.portfolio-card:not(:nth-child(3n + 3)) {
+.portfolio__card-item:not(:nth-child(3n + 3)) {
   margin-right: 30px;
 }
 
-.portfolio-card:not(:nth-last-child(-n + 3)) {
+.portfolio__card-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
 
-.portfolio-card:hover {
+.portfolio__card-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -1069,14 +1069,14 @@ Portfolio cards
 /************
  ANIMATION 
  ************/
-.descr-div {
+.portfolio-card__descr {
   position: relative;
   overflow: hidden;
   width: 370px;
   height: 294px;
 }
 
-.descr-card {
+.portfolio-card__text {
   position: absolute;
   left: 0;
   top: 0;
@@ -1095,6 +1095,6 @@ Portfolio cards
   transition: transform 300ms var(--timing);
 }
 
-.portfolio-card:hover .descr-card {
+.portfolio__card-item:hover .portfolio-card__text {
   transform: translateY(0%);
 }
