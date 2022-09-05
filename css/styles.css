@@ -43,11 +43,11 @@
   --card-back: rgba(33, 150, 243, 0.9);
   --timing: cubic-bezier(0.4, 0, 0.2, 1);
   --backdrop-bg: rgba(0, 0, 0, 0.1);
-  /* --color-back: transparent;
-  --color-social: currentColor;
+  --color-back: transparent;
+   --color-social: currentColor;
   --color-clients: currentColor;
-  --color-social-footer: currentColor;
-  --color-mail: currentColor; */
+  /* --color-social-footer: currentColor; */
+  --color-mail: currentColor;
 }
 
 body {
@@ -488,7 +488,7 @@ color: rgba(117, 117, 117, 0.5);
 
 .modal-form__send-btn:hover,
 .modal-form__send-btn:focus {
-  background: #188CE8;
+  background: var(--accent-color);
 }
 
 .modal-form__icon {
@@ -690,14 +690,19 @@ ICONS
   padding-bottom: 30px;
 }
 .overlay__icon{
+  color: var(--social-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--btn-text-color);
+  -webkit-transition: color 250ms var(--timing), background-color 250ms var(--timing);
   transition: color 250ms var(--timing), background-color 250ms var(--timing);
 }
 
 .overlay__link:hover>.overlay__icon,
 .overlay__link:focus>.overlay__icon {
-  --color-social: var(--btn-text-color);
-  --color-back: var(--accent-color);
-  transition: color 250ms var(--timing),background-color 250ms var(--timing)
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
 }
 
 .list .overlay__item+.overlay__item {
@@ -751,7 +756,12 @@ ICONS
 }
 
 .clients__icon {
-  fill: #afb1b8;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+padding: 18px 34px;
+color: var(--social-color);
+-webkit-transition: color 250ms var(--timing);
+transition: color 250ms var(--timing);
 }
 
 .clients__overlay:hover,
