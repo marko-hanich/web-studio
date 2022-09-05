@@ -126,6 +126,7 @@ body {
 .nav__link {
   color: var(--main-color);
   position: relative;
+  transition: color 250ms var(--timing);
 }
 
 .nav__link.nav__link--active::after {
@@ -145,6 +146,7 @@ body {
   color: var(--secondary-color);
   display: flex;
   align-items: center;
+  transition: color 250ms var(--timing);
 }
 
 .nav__link:hover,
@@ -687,11 +689,15 @@ ICONS
   justify-content: center;
   padding-bottom: 30px;
 }
+.overlay__icon{
+  transition: color 250ms var(--timing), background-color 250ms var(--timing);
+}
 
 .overlay__link:hover>.overlay__icon,
 .overlay__link:focus>.overlay__icon {
   --color-social: var(--btn-text-color);
   --color-back: var(--accent-color);
+  transition: color 250ms var(--timing),background-color 250ms var(--timing)
 }
 
 .list .overlay__item+.overlay__item {
@@ -810,6 +816,7 @@ ICONS
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--btn-text-color);
+  transition: color 250ms var(--timing);
 }
 
 .address__item {
@@ -950,10 +957,14 @@ cursor: pointer;
 .footer__join .item+.item {
   margin-left: 10px;
 }
+.footer__join--icon>.icon {
+    transition: color 250ms var(--timing);
 
+}
 .footer__join--icon:hover>.icon,
 .footer__join--icon:focus>.icon {
   --color-social-footer: var(--accent-color);
+
 }
 
 
@@ -993,6 +1004,7 @@ cursor: pointer;
   cursor: pointer;
   justify-content: center;
   height: 38px;
+  transition: color 250ms var(--timing),background-color 250ms var(--timing)
 }
 
 .portfolio-filter__btn:hover,
@@ -1001,6 +1013,7 @@ cursor: pointer;
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    
 }
 
 /*################
