@@ -1,0 +1,117 @@
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav__list .item + .item {
+  margin-left: 50px;
+}
+
+.nav__list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-info {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+}
+
+.nav__logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-color);
+
+  margin-right: 93px;
+}
+
+.nav__logo--accent {
+  color: var(--accent-color);
+}
+
+/* 
+  ##########################################  
+  УСТАНОВКА ПОЛОСКИ ПОД АКТИВНОЙ СТРАНИЦЕЙ 
+  ##########################################
+  */
+.nav__link {
+  color: var(--main-color);
+  position: relative;
+  transition: color 250ms var(--timing);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav__link.nav__link--active::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  display: block;
+  background: var(--accent-color);
+  border-radius: 2px;
+  bottom: 0;
+}
+
+/* ########################################## */
+
+.contacts__item > .contacts__link {
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  transition: color 250ms var(--timing);
+}
+
+.contacts__link {
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav__link--active {
+  color: var(--accent-color);
+}
+
+.nav__list .item {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item .icon {
+  margin-right: 10px;
+}
+
+.contacts__link:hover > .icon,
+.contacts__link:focus > .icon {
+  --color-mail: var(--accent-color);
+}
