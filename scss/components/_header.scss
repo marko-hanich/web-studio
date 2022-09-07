@@ -34,6 +34,13 @@
 
 .menu {
   display: flex;
+   align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    align-items: normal;
+    justify-content: normal;
+  }
 }
 
 .nav__logo {
@@ -43,8 +50,19 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--logo-color);
-
   margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .nav__logo--accent {

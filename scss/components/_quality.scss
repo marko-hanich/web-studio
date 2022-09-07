@@ -1,12 +1,15 @@
-.quality {
+.quality__list {
   display: flex;
   justify-content: center;
 
   margin-top: 94px;
   margin-bottom: 94px;
-}
 
-.quality__list {
+  @media screen and (max-width: 480px) {
+display: block;
+}
+}
+.quality__item {
   margin-right: 30px;
   &:last-child {
     margin-right: 0px;
@@ -17,7 +20,7 @@
   width: 270px;
 }
 
-.quality .item + .item {
+.quality__list .item + .item {
   margin-left: 30px;
 }
 
@@ -32,7 +35,7 @@
   margin-bottom: 10px;
 }
 
-.quality__item {
+.quality__descr {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

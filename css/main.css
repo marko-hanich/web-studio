@@ -58,7 +58,6 @@ body {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -81,8 +80,14 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 ul {
@@ -94,11 +99,6 @@ ul {
 
 li {
   list-style: none;
-}
-
-body {
-  font-family: var(--main-font);
-  color: var(--main-color);
 }
 
 .container {
@@ -174,6 +174,22 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
 }
 
 .nav__logo {
@@ -184,6 +200,22 @@ p {
   letter-spacing: 0.03em;
   color: var(--logo-color);
   margin-right: 93px;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__logo {
+    font-size: 26px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .nav__logo--accent {
@@ -603,7 +635,7 @@ p {
   fill: var(--accent-color);
 }
 
-.quality {
+.quality__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -613,11 +645,16 @@ p {
   margin-top: 94px;
   margin-bottom: 94px;
 }
+@media screen and (max-width: 480px) {
+  .quality__list {
+    display: block;
+  }
+}
 
-.quality__list {
+.quality__item {
   margin-right: 30px;
 }
-.quality__list:last-child {
+.quality__item:last-child {
   margin-right: 0px;
 }
 
@@ -625,7 +662,7 @@ p {
   width: 270px;
 }
 
-.quality .item + .item {
+.quality__list .item + .item {
   margin-left: 30px;
 }
 
@@ -640,7 +677,7 @@ p {
   margin-bottom: 10px;
 }
 
-.quality__item {
+.quality__descr {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -669,6 +706,11 @@ p {
 
 .section-work {
   padding-bottom: 94px;
+}
+@media screen and (max-width: 480px) {
+  .section-work {
+    display: none;
+  }
 }
 
 .title {
