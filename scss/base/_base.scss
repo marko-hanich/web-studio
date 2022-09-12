@@ -10,6 +10,7 @@ address {
 body {
   font-family: var(--main-font);
   color: var(--main-color);
+  overflow-x: hidden;
 }
 
 .container {
