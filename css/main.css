@@ -43,9 +43,16 @@
   --color-mail: currentColor;
 }
 
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 a {
-  text-decoration: none;
   display: inline-block;
+  text-decoration: none;
 }
 
 address {
@@ -55,7 +62,15 @@ address {
 body {
   font-family: var(--main-font);
   color: var(--main-color);
-  overflow-x: hidden;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -89,25 +104,6 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-}
-
-ul {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-li {
-  list-style: none;
-}
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .link {
@@ -653,6 +649,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 94px;
   margin-bottom: 94px;
 }
@@ -707,10 +709,10 @@ p {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 0;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
@@ -724,32 +726,31 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
-  max-width: 270px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .quality-card {
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  background: var(--portfolio-btn-back-color);
-  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 450px;
+  height: 120px;
+  background: var(--portfolio-btn-back-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .section-work {
   padding-bottom: 94px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
   .section-work {
     display: none;
   }
@@ -804,14 +805,34 @@ p {
   position: relative;
 }
 
-.team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 480px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.team__list .team__item + .team__item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .team__list .team__item + .team__item {
+    margin-left: 30px;
+  }
 }
 
 .team__item {
@@ -822,6 +843,18 @@ p {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+@media screen and (max-width: 480px) {
+  .team__item {
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 
 .team-section {
   background-color: var(--team-background-color);
@@ -829,6 +862,18 @@ p {
 
 .team__title {
   margin-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .team__title {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 30px;
+  }
 }
 
 .work__team {

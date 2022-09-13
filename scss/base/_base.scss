@@ -1,18 +1,29 @@
-a {
-  text-decoration: none;
-  display: inline-block;
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
 }
-
+a {
+  display: inline-block;
+  text-decoration: none;
+}
 address {
   font-style: normal;
 }
-
 body {
   font-family: var(--main-font);
   color: var(--main-color);
-  overflow-x: hidden;
-}
 
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -22,33 +33,18 @@ body {
   @media screen and (min-width: 480px) {
     width: 480px;
   }
-
   @media screen and (min-width: 768px) {
     width: 768px;
   }
-
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
 }
-
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-}
-
-ul {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-li {
-  list-style: none;
 }
