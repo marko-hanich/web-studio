@@ -20,12 +20,12 @@
 
 .team__list {
   display: flex;
-  align-items: center;
   flex-direction: column;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row
   }
 }
 
@@ -49,8 +49,21 @@
   &:not(:last-child) {
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
+    }}
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+      }
+  }
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+    &:nth-child(odd) {
+      margin-right: 30px;
     }
   }
+   @media screen and (min-width: 1199px) {
+    width: 270px;}
 }
 
 .work__team {
