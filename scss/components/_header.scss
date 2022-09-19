@@ -16,6 +16,11 @@
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
+    @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+    
 @media screen and (min-width: 768px) {
     display: flex;
     margin-right: 84px;
@@ -26,7 +31,9 @@
 }
 
 .nav__list .item + .item {
-  margin-left: 50px;
+ 
+  @media screen and (min-width: 768px) {
+  margin-left: 50px;}
 }
 
 .nav__list .link {
@@ -41,6 +48,10 @@
 
 .header-info {
   margin-left: auto;
+    @media screen and (max-width: 767px) {
+      display: flex;
+    align-items: flex-start;
+    margin-left: 0;}
 }
 
 .menu {
@@ -162,10 +173,12 @@
 /* ########################################## */
 
 .contacts__item > .contacts__link {
-  color: var(--secondary-color);
   display: flex;
   align-items: center;
   transition: color 250ms var(--timing);
+  @media screen and (min-width: 768px) {
+  color: var(--secondary-color);
+        }
 }
 
 .contacts__link {
@@ -274,7 +287,7 @@ display: none;
 
 
 // -------------------
-.contacts__tel {
+.contacts__link--tel {
     @media screen and (max-width: 767px) {
 
   font-family: 'Roboto';
@@ -288,11 +301,13 @@ color: var(--accent-color);
 }
 .contacts__item--tel {
         @media screen and (max-width: 767px) {
-
+margin-left: 0;
+margin-top: 200px;
+margin-bottom: 32px;
     order: -1;}
 }
 
-.contacts__mail {
+.contacts__link--mail {
      @media screen and (max-width: 767px) {
   font-family: 'Roboto';
 font-style: normal;
@@ -301,4 +316,36 @@ font-size: 24px;
 line-height: 28px;
 letter-spacing: 0.02em;
 color: #757575;
+margin-left: 0;
 }}
+
+
+
+
+
+
+
+
+// ИКОНКИ
+
+.contacts__social-list {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.contacts__social-item {
+  display: inline-block;
+  padding-right: 10px;
+  margin-right: 10px;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+.contacts__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}

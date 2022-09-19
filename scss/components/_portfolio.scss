@@ -2,6 +2,11 @@
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
+        @media screen and (max-width: 767px) {
+
+      justify-content: flex-start;
+    flex-wrap: wrap;}
+    
 }
 
 .portfolio-filter .item + .item {
