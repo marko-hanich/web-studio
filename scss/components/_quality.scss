@@ -15,7 +15,13 @@
 
   @media screen and (max-width: 767px) {
 display: block;
+margin-top: 60px;
+margin-bottom: 60px;}
+@media screen and (max-width: 1199px) {
+margin-top: 60px;
+margin-bottom: 60px;
 }
+
 }
 // .quality__item {
 //   margin-right: 30px;

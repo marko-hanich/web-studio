@@ -19,40 +19,50 @@
 
 <body>
   <!--!Header-->
-  <!-- <header class="header">
+  <header class="header">
     <div class="menu container">
-      <nav class="nav">
-        <a class="link nav__logo" href="./index.html" lang="en">
-          <span class="nav__logo--accent">Web</span>Studio</a>
-        <ul class="list nav__list">
-          <li class="item"><a class="link nav__link nav__link--active" href="./index.html">Студия</a></li>
-          <li class="item"><a class="link nav__link" href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a class="link nav__link" href="#contacts">Контакты</a></li>
+      <a class="link nav__logo" href="./index.html" lang="en">
+        <span class="nav__logo--accent">Web</span>Studio</a>
+      
+      <button class="header__menu-button" type="button" aria-expanded="false" aria-controls="burger__menu"
+        data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use class="icon-menu" href="./images/main-page/icon/icons.svg#icon-menu"></use>
+          <use class="icon-cross" href="./images/main-page/icon/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+      <div class="mobile__menu" id="mobile__menu" data-menu>
+        <nav class="nav">
+          <ul class="list nav__list">
+            <li class="nav__item"><a class="link nav__link nav__link--active" href="./index.html">Студия</a></li>
+            <li class="nav__item"><a class="link nav__link" href="./portfolio.html">Портфолио</a></li>
+            <li class="nav__item"><a class="link nav__link" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="list nav__list header-info">
+          <li class="item contacts__item">
+            <a class="link contacts__link contacts__mail" href="mailto:info@devstudio.com"><svg class="icon contacts__icon" width="16" height="12">
+                <use href="./images/main-page/icon/icons.svg#mail"></use>
+              </svg>info@devstudio.com</a>
+          </li>
+          <li class="item contacts__item contacts__item--tel"><a class="link contacts__link contacts__tel" href="tel:+380961111111"><svg class="icon contacts__icon"
+                width="10" height="16">
+                <use href="./images/main-page/icon/icons.svg#phone"></use>
+              </svg>+38 096 111 11 11</a></li>
         </ul>
-      </nav>
-      <ul class="list nav__list header-info">
-        <li class="item contacts__item">
-          <a class="link contacts__link" href="mailto:info@devstudio.com"><svg class="icon" width="16" height="12">
-              <use href="./images/main-page/icon/icons.svg#mail"></use>
-            </svg>info@devstudio.com</a>
-        </li>
-        <li class="item contacts__item"><a class="link contacts__link" href="tel:+380961111111"><svg class="icon"
-              width="10" height="16">
-              <use href="./images/main-page/icon/icons.svg#phone"></use>
-            </svg>+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </div>
 
-  </header> -->
+  </header>
 
   <main class="main">
     <!--!hero section-->
-    <!-- <section class="hero">
+    <section class="hero">
       <div class="container">
         <h1 class="hero__title">Эффективные решения<br> для вашего бизнеса</h1>
         <button data-modal-open class="hero__modal-btn" type="button">Заказать услугу</button>
       </div>
-    </section> -->
+    </section>
     <!--!QUALITY section-->
     <section>
       <div class="container quality">
@@ -423,7 +433,7 @@
     </div>
   </footer>
   <!-- BACKDROP И ФОРМА -->
-  <!-- <div data-modal class="backdrop is-hidden">
+  <div data-modal class="backdrop is-hidden">
     <div class="modal">
       <button data-modal-close class="modal__button--close" type="button">
         <svg class="modal__button--img" width="30" height="30">
