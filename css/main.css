@@ -1856,8 +1856,17 @@ CARD
   }
 }
 
-.portfolio-filter .item + .item {
-  margin-left: 8px;
+@media screen and (max-width: 1199px) {
+  .btn_item:not(:last-child) {
+    margin-right: 8px;
+  }
+  .btn_item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 15px;
+  }
+}
+
+.portfolio-filter .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-filter__btn {
@@ -1895,6 +1904,22 @@ CARD
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media screen and (max-width: 1199px) {
+  .portfolio__card-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__card-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .portfolio__card-item:nth-child(3n) {
@@ -1936,14 +1961,38 @@ CARD
   transition: -webkit-box-shadow 250ms var(--timing);
   transition: box-shadow 250ms var(--timing);
   transition: box-shadow 250ms var(--timing), -webkit-box-shadow 250ms var(--timing);
-  width: 370px;
   overflow: hidden;
 }
-.portfolio__card-item:not(:nth-child(3n+3)) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio__card-item {
+    width: 354px;
+  }
+  .portfolio__card-item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .portfolio__card-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-.portfolio__card-item:not(:nth-last-child(-n+3)) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .portfolio__card-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__card-item {
+    width: 370px;
+    margin-bottom: 30px;
+  }
+  .portfolio__card-item:nth-child(odd) {
+    margin-right: 0;
+  }
+  .portfolio__card-item:not(:nth-child(3n+3)) {
+    margin-right: 30px;
+  }
+  .portfolio__card-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
+  }
 }
 .portfolio__card-item:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1956,8 +2005,17 @@ CARD
 .portfolio-card__descr {
   position: relative;
   overflow: hidden;
-  width: 370px;
   height: 294px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-card__descr {
+    width: 370px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio-card__descr {
+    max-width: 450px;
+  }
 }
 
 .portfolio-card__text {
