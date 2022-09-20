@@ -5,43 +5,47 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
- 
-   margin-bottom: 30px;
+
+  margin-bottom: 30px;
   max-width: 480px;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 118px 0;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
     height: 400px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 118px 0;
-       @media screen and (min-width: 768px) {
-  max-width: 768px;
-height: 400px;
   }
-           @media screen and (min-width: 1200px) {
- max-width: 1600px;
-  height: 600px;
-}
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero__title {
   font-family: 'Roboto';
-font-weight: 900;
-font-size: 26px;
-line-height: 1.62;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: (var(--btn-text-color));
-margin-bottom: 30px;
-       @media screen and (min-width: 1200px) {
-
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--btn-text-color);
-  margin-top: 0;
-padding-top: 90px;       }
+  color: (var(--btn-text-color));
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--btn-text-color);
+    margin-top: 0;
+    padding-top: 90px;
+  }
 }
 
 /* ?Для кнопки ставим инлайн-блок */
@@ -60,6 +64,7 @@ padding-top: 90px;       }
   border: 0;
   display: inline-block;
   padding: 10px 32px;
+
   &:hover,
   &:focus {
     background-color: var(--btn-focus-bg);

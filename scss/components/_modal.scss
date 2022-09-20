@@ -1,19 +1,22 @@
 .modal {
   border-radius: 4px;
-     @media screen and (min-width: 1200px) {
-      min-width: 528px;
-  min-height: 581px;
-     }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+
   background-color: var(--btn-text-color);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-   @media screen and (max-width: 1199px) {
-            width: 93.75vw;
+
+  @media screen and (max-width: 1199px) {
+    width: 93.75vw;
     max-width: 450px;
     min-height: 609px;
-          }
+  }
 }
 
 .modal__button--close {
@@ -28,6 +31,7 @@
   cursor: pointer;
   transition: color 250ms var(--timing);
   opacity: 0.3;
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -84,6 +88,7 @@
   cursor: pointer;
   transition: border 250ms var(--timing);
   outline: none;
+
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -106,10 +111,12 @@
   cursor: pointer;
   transition: border 250ms var(--timing);
   outline: none;
+
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
   }
+
   &::placeholder {
     font-size: 12px;
     line-height: 1.16;
@@ -144,16 +151,16 @@
 .modal-form__checkbox-svg {
   position: absolute;
   top: 3px;
-  left: 12px;
+  // left: 12px;
   transform: scale(1);
   transition: transform 250ms var(--timing);
 }
 
-.modal-form__input-check:not(:checked) ~ .modal-form__checkbox-svg {
+.modal-form__input-check:not(:checked)~.modal-form__checkbox-svg {
   transform: scale(0);
 }
 
-.modal-form__input-check:not(:checked) ~ .modal-form__checkbox-overlay {
+.modal-form__input-check:not(:checked)~.modal-form__checkbox-overlay {
   transform: scale(1);
 }
 
@@ -165,8 +172,9 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-left: 24px;
-     @media screen and (max-width: 1199px) {
-     font-size: 12px;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
     line-height: 1.17;
   }
 }
@@ -177,8 +185,9 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-   @media screen and (max-width: 1199px) {
-     font-size: 12px;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.03em;
   }
@@ -208,6 +217,7 @@
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+
   &:hover,
   &:focus {
     background: var(--accent-color);
@@ -221,7 +231,7 @@
   transition: fill 250ms var(--timing);
 }
 
-.modal-form .input:hover ~ .modal-form__icon,
-.modal-form .input:focus ~ .modal-form__icon {
+.modal-form .input:hover~.modal-form__icon,
+.modal-form .input:focus~.modal-form__icon {
   fill: var(--accent-color);
 }

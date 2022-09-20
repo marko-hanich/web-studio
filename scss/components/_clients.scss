@@ -1,7 +1,7 @@
 .clients__title {
   margin-bottom: 50px;
   padding-top: 60px;
-    font-weight: 700;
+  font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
   text-align: center;
@@ -22,29 +22,34 @@
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-justify-content: center;
+  justify-content: center;
+
   @media screen and (min-width: 768px) {
     justify-content: space-between;
   }
- @media screen and (max-width: 1199px) {
+
+  @media screen and (max-width: 1199px) {
     justify-content: space-between;
-  
-  margin-bottom: 60px;}
+
+    margin-bottom: 60px;
+  }
 
 }
 
 .clients__item {
-   @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     &:nth-child(odd) {
       margin-right: 30px;
     }
   }
- &:not(:nth-last-child(-n+2)) {
-    margin-bottom: 30px;
-}
 
-&:nth-child(odd) {
+  &:not(:nth-last-child(-n+2)) {
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(odd) {
     margin-right: 30px;
+
     @media screen and (min-width: 768px) {
       margin-right: 0;
     }
@@ -52,6 +57,7 @@ justify-content: center;
 
   &:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
+
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
@@ -69,13 +75,16 @@ justify-content: center;
 
   @media screen and (min-width: 768px) {
     flex-basis: 226px;
+
     &:not(:nth-last-child(-n + 3)) {
       margin-bottom: 30px;
+
       @media screen and (min-width: 1200px) {
         margin-bottom: 0;
       }
     }
   }
+
   @media screen and (min-width: 1200px) {
     flex-basis: 170px;
     margin-bottom: 94px;
@@ -87,6 +96,7 @@ justify-content: center;
     }
   }
 }
+
 .clients__overlay {
   width: 170px;
   height: 92px;
@@ -96,16 +106,19 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
+
   &:hover,
   &:focus {
     border-color: var(--accent-color);
   }
+
   @media screen and (min-width: 768px) {
-     width: -webkit-fill-available;
+    width: -webkit-fill-available;
 
   }
-@media screen and (min-width: 1200px) {
-     width:170px;
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
 
   }
 }
@@ -113,20 +126,19 @@ justify-content: center;
 .clients__overlay .clients__icon {
   box-sizing: content-box;
   padding: 18px 34px;
+
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
-//!PROBLEMS
 
 .clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  // border: 1px solid #afb1b8;
   border-radius: 4px;
-  // width: 170px;
   height: 92px;
+
   &:hover,
   &:focus {
     --color-clients: var(--accent-color);
@@ -140,5 +152,4 @@ justify-content: center;
   color: var(--social-color);
   -webkit-transition: color 250ms var(--timing);
   transition: color 250ms var(--timing);
-  
 }
