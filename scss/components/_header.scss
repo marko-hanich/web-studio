@@ -30,29 +30,44 @@
   }
 }
 
-.nav__list .item + .item {
- 
-  @media screen and (min-width: 768px) {
-  margin-left: 50px;}
-}
-
-.nav__list .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  @media screen and (max-width: 767px) {
-    padding-top: 0;
-  padding-bottom: 0;
-  }
-}
-
 .header-info {
   margin-left: auto;
     @media screen and (max-width: 767px) {
       display: flex;
     align-items: flex-start;
     margin-left: 0;}
+        @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+        @media screen and (min-width: 1200px) {
+        margin-right: -20px;
+
+  }
 }
+
+.nav__list .item + .item {
+ 
+  @media screen and (min-width: 1200px) {
+  margin-left: 50px;}
+}
+
+.nav__list .link {
+  display: block;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  padding-bottom: 0;
+  }
+    @media screen and (min-width: 1200px) {
+    
+  padding-top: 32px;
+  padding-bottom: 32px;
+    }
+}
+
+
 
 .menu {
   display: flex;
@@ -171,6 +186,14 @@
 }
 
 /* ########################################## */
+.contacts {
+      @media screen and (min-width:768px) {
+    align-items: center;
+    display: flex;
+}
+  
+
+}
 
 .contacts__item > .contacts__link {
   display: flex;
@@ -186,7 +209,13 @@
   &:focus {
     color: var(--accent-color);
   }
-}
+    @media screen and (max-width: 1199px) {
+  font-family: 'Roboto';
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.02em;
+}}
 
 .nav__link--active {
   color: var(--accent-color);
@@ -194,13 +223,24 @@
 
 .nav__list .item {
   display: flex;
-  justify-content: center;
+  @media screen and (min-width: 1200px) {
+  justify-content: center;}
 }
 
 .contacts__item {
   display: flex;
   align-items: center;
+  &:not(:last-child) {
+    
+  
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
 }
+    @media screen and (min-width: 1200px) {
+margin-bottom: 0;}
+    }}
+    
+
 
 .contacts__item .icon {
   margin-right: 10px;
@@ -332,6 +372,10 @@ margin-left: 0;
   @media screen and (min-width: 768px) {
     display: none;
   }
+     @media screen and (max-width: 767px) {
+
+margin-left: auto;
+    margin-right: auto;}
 }
 .contacts__social-item {
   display: inline-block;
