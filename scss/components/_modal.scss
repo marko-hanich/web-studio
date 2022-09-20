@@ -1,12 +1,19 @@
 .modal {
   border-radius: 4px;
-  min-width: 528px;
+     @media screen and (min-width: 1200px) {
+      min-width: 528px;
   min-height: 581px;
+     }
   background-color: var(--btn-text-color);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+   @media screen and (max-width: 1199px) {
+            width: 93.75vw;
+    max-width: 450px;
+    min-height: 609px;
+          }
 }
 
 .modal__button--close {
@@ -129,7 +136,7 @@
 .modal-form__checkbox-overlay {
   position: absolute;
   top: 3px;
-  left: 12px;
+  // left: 12px;
   transform: scale(0);
   transition: transform 250ms var(--timing);
 }
@@ -157,7 +164,11 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-left: 36px;
+  margin-left: 24px;
+     @media screen and (max-width: 1199px) {
+     font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .modal-form__license-link {
@@ -166,6 +177,11 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
+   @media screen and (max-width: 1199px) {
+     font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__send-btn {
