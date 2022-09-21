@@ -18,13 +18,11 @@
 
 .work__list {
   display: flex;
-
- 
 }
 
- .work__list .item {
-    position: relative;
-  }
+.work__list .item {
+  position: relative;
+}
 
 .work__list .item+.item {
   margin-left: 30px;
