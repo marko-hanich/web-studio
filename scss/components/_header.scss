@@ -135,6 +135,13 @@
   align-items: center;
 }
 
+.contacts {
+  @media screen and (min-width:768px) {
+    align-items: center;
+    display: flex;
+  }
+}
+
 .nav__list {
   margin-top: 0;
   margin-bottom: 0;
@@ -154,6 +161,36 @@
   @media screen and (min-width: 1200px) {
     margin-right: 305px;
   }
+
+  & .item {
+    display: flex;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+    }
+  }
+
+  & .item+.item {
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
+  }
+
+  & .link {
+    display: block;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
 }
 
 .header-info {
@@ -163,7 +200,7 @@
     display: flex;
     align-items: flex-start;
     margin-left: 0;
-     margin-bottom: 64px;
+    margin-bottom: 64px;
   }
 
   @media screen and (max-width: 1199px) {
@@ -178,28 +215,57 @@
   }
 }
 
-.nav__list .item+.item {
+.contacts__item {
+  display: flex;
+  align-items: center;
 
-  @media screen and (min-width: 1200px) {
-    margin-left: 50px;
+  &:not(:last-child) {
+
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &>.contacts__link {
+    display: flex;
+    align-items: center;
+    transition: color 250ms var(--timing);
+
+    @media screen and (min-width: 768px) {
+      color: var(--secondary-color);
+    }
+  }
+
+  & .icon {
+    margin-right: 10px;
   }
 }
 
-.nav__list .link {
-  display: block;
+.contacts__link {
 
-  @media screen and (max-width: 767px) {
-    padding-top: 0;
-    padding-bottom: 0;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1199px) {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+  }
 
-    padding-top: 32px;
-    padding-bottom: 32px;
+  &:hover>.icon,
+  &:focus>.icon {
+    --color-mail: var(--accent-color);
   }
 }
-
 
 .nav__item {
   &:not(:last-child) {
@@ -239,6 +305,10 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
+    &--active {
+      color: var(--accent-color);
+    }
+
     &--active::after {
       position: absolute;
       bottom: 0;
@@ -256,102 +326,6 @@
   }
 }
 
-.nav__link.nav__link--active::after {
-  content: '';
-  width: 100%;
-  position: absolute;
-  height: 4px;
-  display: block;
-  background: var(--accent-color);
-  border-radius: 2px;
-  bottom: 0;
-
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
-
-//ICONS (MOBILE MOD)
-.contacts {
-  @media screen and (min-width:768px) {
-    align-items: center;
-    display: flex;
-  }
-}
-
-.contacts__item>.contacts__link {
-  display: flex;
-  align-items: center;
-  transition: color 250ms var(--timing);
-
-  @media screen and (min-width: 768px) {
-    color: var(--secondary-color);
-  }
-}
-
-.contacts__link {
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-
-  @media screen and (max-width: 1199px) {
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.02em;
-  }
-}
-
-.nav__link--active {
-  color: var(--accent-color);
-}
-
-.nav__list .item {
-  display: flex;
-
-  @media screen and (min-width: 1200px) {
-    justify-content: center;
-  }
-}
-
-.contacts__item {
-  display: flex;
-  align-items: center;
-
-  &:not(:last-child) {
-
-
-    @media screen and (min-width: 768px) {
-      margin-bottom: 10px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 0;
-    }
-  }
-}
-
-
-
-.contacts__item .icon {
-  margin-right: 10px;
-}
-
-.contacts__link:hover>.icon,
-.contacts__link:focus>.icon {
-  --color-mail: var(--accent-color);
-}
-
-
-
-
-
-
-
-// -------------------
 .contacts__link--tel {
   @media screen and (max-width: 767px) {
 
@@ -387,14 +361,7 @@
   }
 }
 
-
-
-
-
-
-
-
-// ИКОНКИ
+//ICONS (MOBILE MOD)
 
 .contacts__social-list {
   @media screen and (min-width: 768px) {
@@ -402,7 +369,6 @@
   }
 
   @media screen and (max-width: 767px) {
-
     margin-left: auto;
     margin-right: auto;
   }

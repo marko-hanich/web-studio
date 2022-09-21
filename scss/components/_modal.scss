@@ -1,16 +1,15 @@
 .modal {
   border-radius: 4px;
-
-  @media screen and (min-width: 1200px) {
-    min-width: 528px;
-    min-height: 581px;
-  }
-
   background-color: var(--btn-text-color);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
 
   @media screen and (max-width: 1199px) {
     width: 93.75vw;
@@ -95,6 +94,11 @@
   }
 }
 
+.modal-form .input:hover~.modal-form__icon,
+.modal-form .input:focus~.modal-form__icon {
+  fill: var(--accent-color);
+}
+
 .modal-form__area {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -164,6 +168,13 @@
   transform: scale(1);
 }
 
+.modal-form__icon {
+  position: absolute;
+  top: 28px;
+  left: 12px;
+  transition: fill 250ms var(--timing);
+}
+
 .modal-form__check-text {
   color: var(--secondary-color);
   font-family: 'Roboto';
@@ -222,16 +233,4 @@
   &:focus {
     background: var(--accent-color);
   }
-}
-
-.modal-form__icon {
-  position: absolute;
-  top: 28px;
-  left: 12px;
-  transition: fill 250ms var(--timing);
-}
-
-.modal-form .input:hover~.modal-form__icon,
-.modal-form .input:focus~.modal-form__icon {
-  fill: var(--accent-color);
 }
