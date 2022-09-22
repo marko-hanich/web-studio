@@ -641,6 +641,7 @@ p {
   transition: opacity 250ms var(--timing), -webkit-transform 250ms var(--timing);
   transition: transform 250ms var(--timing), opacity 250ms var(--timing);
   transition: transform 250ms var(--timing), opacity 250ms var(--timing), -webkit-transform 250ms var(--timing);
+  z-index: 4;
 }
 
 .is-hidden {
