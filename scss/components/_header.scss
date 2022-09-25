@@ -155,7 +155,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-right: 84px;
+    margin-right: 0px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -196,6 +196,12 @@
 .header-info {
   margin-left: auto;
 
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 84px;
+  }
   @media screen and (max-width: 767px) {
     display: flex;
     align-items: flex-start;
@@ -203,15 +209,8 @@
     margin-bottom: 64px;
   }
 
-  @media screen and (max-width: 1199px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   @media screen and (min-width: 1200px) {
     margin-right: -20px;
-
   }
 }
 

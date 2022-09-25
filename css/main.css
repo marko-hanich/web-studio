@@ -308,7 +308,7 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 84px;
+    margin-right: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -352,18 +352,6 @@ p {
 .header-info {
   margin-left: auto;
 }
-@media screen and (max-width: 767px) {
-  .header-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-left: 0;
-    margin-bottom: 64px;
-  }
-}
 @media screen and (max-width: 1199px) {
   .header-info {
     display: -webkit-box;
@@ -376,6 +364,19 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-left: 84px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 0;
+    margin-bottom: 64px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -561,8 +562,9 @@ p {
 
 .hero {
   background-color: var(--hero-background-color);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-page/overlay/overlay.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/overlay/overlay.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/overlay/overlay@480.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/overlay/overlay@480.jpg");
+  background-size: 480px 400px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -576,16 +578,39 @@ p {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    height: 400px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/overlay/overlay@768.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/overlay/overlay@768.jpg");
+    background-size: 768px 400px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     height: 600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/overlay/overlay@1600.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/overlay/overlay@1600.jpg");
+    background-size: 1600px 600px;
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/overlay/overlay@960.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/overlay/overlay@960.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/overlay/overlay@1536.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/overlay/overlay@1536.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/overlay/overlay@3200.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/overlay/overlay@3200.jpg");
+  }
+}
 .hero__title {
   font-family: "Roboto";
   font-weight: 900;
